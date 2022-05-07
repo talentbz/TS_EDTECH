@@ -18,6 +18,11 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index'])->name('front.index');
 Route::prefix('/admin')->middleware(['auth:web', 'Admin'])->group(function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
+    Route::group(['prefix' => 'administration'], function(){
+        Route::group(['prefix' => 'manager'], function(){
+            Route::get('/', [App\Http\Controllers\ManagerController::class, 'index'])->name('manager.index');
+        });
+    });
 });
 
 //Update User Details

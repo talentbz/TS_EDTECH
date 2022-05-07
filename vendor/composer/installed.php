@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd8209997e1194121070aa0f5f2f634a71163eff8',
+        'reference' => '5fa32aabfdec715501e6f9400cd87763bc349c85',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -388,6 +388,15 @@
                 0 => 'v8.23.1',
             ),
         ),
+        'intervention/image' => array(
+            'pretty_version' => '2.7.1',
+            'version' => '2.7.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../intervention/image',
+            'aliases' => array(),
+            'reference' => '744ebba495319501b873a4e48787759c72e3fb8c',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -409,7 +418,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd8209997e1194121070aa0f5f2f634a71163eff8',
+            'reference' => '5fa32aabfdec715501e6f9400cd87763bc349c85',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -437,6 +446,15 @@
             'install_path' => __DIR__ . '/../laravel/ui',
             'aliases' => array(),
             'reference' => 'a1f82c6283c8373ea1958b8a27c3d5c98cade351',
+            'dev_requirement' => false,
+        ),
+        'laravolt/avatar' => array(
+            'pretty_version' => '4.1.7',
+            'version' => '4.1.7.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravolt/avatar',
+            'aliases' => array(),
+            'reference' => '2c11878524e19032793effa67f09df0682e5775b',
             'dev_requirement' => false,
         ),
         'league/commonmark' => array(
@@ -727,8 +745,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0',
-                1 => '1.0.0',
+                0 => '1.0.0',
+                1 => '1.0',
             ),
         ),
         'psr/simple-cache' => array(

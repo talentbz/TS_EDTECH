@@ -54,7 +54,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="javascript: void(0);" key="t-products">Report</a></li>
-                        <li><a href="javascript: void(0);" key="t-products">Manager</a></li>
+                        <li><a href="{{route('manager.index')}}" key="t-products">Manager</a></li>
                         <li><a href="javascript: void(0);" key="t-products">Broadcast</a></li>
                     </ul>
                 </li>
