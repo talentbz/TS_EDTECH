@@ -7,8 +7,14 @@
                     <span class="logo-lg">
                         <img src="{{ URL::asset ('/images/logo.png') }}" alt="" height="50">
                     </span>
+                    <span class="logo-sm">
+                        <img src="{{ URL::asset ('/images/logo.png') }}" alt="" height="50">
+                    </span>
                 </a>
             </div>
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
     </div>
 
     <div class="d-flex">
