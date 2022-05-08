@@ -16,6 +16,18 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index'])->name('front.index');
+
+//user manager
+Route::prefix('/user')->middleware(['auth:web', 'User'])->group(function () {
+    Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+
+    //setting
+    Route::group(['prefix' => 'setting'], function(){
+        Route::get('/', [App\Http\Controllers\ManagerController::class, 'index'])->name('manager.index');
+    });
+});
+
+//admin manger
 Route::prefix('/admin')->middleware(['auth:web', 'Admin'])->group(function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
     

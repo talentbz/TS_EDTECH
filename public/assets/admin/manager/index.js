@@ -24,7 +24,7 @@ $(document).ready(function(){
         $('.confirm_edit').click(function(){
             var name = $('.username').val();
             var email = $('.useremail').val();
-            var password = $('.useremail').val();
+            var password = $('.userpassword').val();
             $.ajaxSetup({
                 headers: {
                   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
