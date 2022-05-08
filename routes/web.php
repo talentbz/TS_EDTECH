@@ -23,7 +23,7 @@ Route::prefix('/user')->middleware(['auth:web', 'User'])->group(function () {
 
     //setting
     Route::group(['prefix' => 'setting'], function(){
-        Route::get('/', [App\Http\Controllers\ManagerController::class, 'index'])->name('manager.index');
+        // Route::get('/', [App\Http\Controllers\ManagerController::class, 'index'])->name('setting.index');
     });
 });
 
