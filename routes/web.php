@@ -18,9 +18,16 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index'])->name('front.index');
 Route::prefix('/admin')->middleware(['auth:web', 'Admin'])->group(function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
+    
+    //administration section
     Route::group(['prefix' => 'administration'], function(){
+        //admin manager section
         Route::group(['prefix' => 'manager'], function(){
             Route::get('/', [App\Http\Controllers\ManagerController::class, 'index'])->name('manager.index');
+            Route::post('/add', [App\Http\Controllers\ManagerController::class, 'add'])->name('manager.add');
+            Route::get('/detail', [App\Http\Controllers\ManagerController::class, 'detail'])->name('manager.detail');
+            Route::get('/edit', [App\Http\Controllers\ManagerController::class, 'edit'])->name('manager.edit');
+            Route::get('/delete', [App\Http\Controllers\ManagerController::class, 'delete'])->name('manager.delete');
         });
     });
 });
