@@ -1,0 +1,31 @@
+.invoice {
+    border-bottom: 2px solid #a3a3a3;
+    padding-bottom: 20px;
+}
+.add-new {
+    height: 150px;
+    border: 2px dashed #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new-button {
+    text-align: center;
+}
+.new-button i {
+    font-size: 60px;
+}
+.invoice-click {
+    color: #9C9C9C;
+}
+.invoice-click:hover {
+    color: #978888;
+}
+.detail {
+    border: 2px solid #a3a3a3;
+    height: 150px;
+}
+.detail .title p {
+    margin-bottom: 0.2rem;
+    color: #a3a3a3;
+}

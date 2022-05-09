@@ -32,15 +32,8 @@
             </div>
             @include('user.layouts.footer')
         </div>
-        <!-- ============================================================== -->
-        <!-- End Right content here -->
-        <!-- ============================================================== -->
     </div>
     <!-- END wrapper -->
-
-    <!-- Right Sidebar -->
-    @include('user.layouts.right-sidebar')
-    <!-- END Right Sidebar -->
 
     @include('user.layouts.vendor-scripts')
 </body>

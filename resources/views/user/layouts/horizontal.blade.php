@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="javascript:void(0)" role="button">
+                        <a class="nav-link dropdown-toggle arrow-none" href="{{route('user.billing.index')}}" role="button">
                             <span key="t-dashboards">Billing</span>
                         </a>
                     </li>

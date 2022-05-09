@@ -854,7 +854,7 @@ body[data-sidebar=colored].vertical-collpsed .vertical-menu #sidebar-menu ul li 
 }
 
 .topnav .navbar-nav .nav-link:focus,.topnav .navbar-nav .nav-link:hover {
-    color: #556ee6;
+    color: #34C495;
     background-color: transparent
 }
 
@@ -863,11 +863,11 @@ body[data-sidebar=colored].vertical-collpsed .vertical-menu #sidebar-menu ul li 
 }
 
 .topnav .navbar-nav .dropdown-item.active,.topnav .navbar-nav .dropdown-item:hover,.topnav .navbar-nav .nav-item .nav-link.active {
-    color: #556ee6
+    color: #34C495
 }
 
 .topnav .navbar-nav .dropdown.active>a {
-    color: #556ee6;
+    color: #34C495;
     background-color: transparent
 }
 
