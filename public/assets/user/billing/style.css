@@ -15,10 +15,10 @@
 .new-button i {
     font-size: 60px;
 }
-.invoice-click {
+.invoice-click, .bank-click {
     color: #9C9C9C;
 }
-.invoice-click:hover {
+.invoice-click:hover ,.bank-click:hover{
     color: #978888;
 }
 .detail {
@@ -29,3 +29,9 @@
     margin-bottom: 0.2rem;
     color: #a3a3a3;
 }
+/* .busness_add {
+    display: none;
+}
+input[value="Business"]:checked ~ .busness_add {
+	display: block;
+} */
