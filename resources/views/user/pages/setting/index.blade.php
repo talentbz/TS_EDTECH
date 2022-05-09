@@ -13,9 +13,61 @@
     <div class="card">
         <div class="card-body">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 basic-info">
                     <h5>Basic Info</h5>
-
+                    <div class="current-info pb-4">
+                        <div class="mt-3 row">
+                            <div class="col-md-6">
+                                <input class="form-control" type="email" value="{{Auth::user()->email}}" readonly >
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+                        <div class="row mt-3">
+                            <form id="basicForm" class="custom-validation" method="get" enctype="multipart/form-data">
+                                @csrf
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input class="form-control" type="password" name="password" placeholder="Current Password"  required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-success" type="submit">UNLOCK EDIT</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="edit-info">
+                        <div class="edit-password mt-3 pb-4">
+                            <form action="" class="custom-validation">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="password" id="pass2" class="form-control mb-2" required placeholder="Password" />
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                    <div class="col-md-6">
+                                        <input type="password" class="form-control" required data-parsley-equalto="#pass2"
+                                            placeholder="Re-Type Password" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-success" type="submit">EDIT PASSWORD</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="edit-email mt-3">
+                            <form action="" class="custom-validation">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" required parsley-type="email"
+                                        placeholder="Enter a valid e-mail" value="{{Auth::user()->email}}" required/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-success" type="submit">EDIT EMAIL</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="my-page">
@@ -71,6 +123,9 @@
 </div>
 @endsection
 @section('script')    
+    <script>
+        var basic_info = "{{route('user.setting.info')}}";
+    </script>
     <!-- form mask -->
     <script src="{{ URL::asset('/assets/libs/inputmask/inputmask.min.js') }}"></script>
     <!-- form mask init -->

@@ -24,6 +24,7 @@ Route::prefix('/user')->middleware(['auth:web', 'User'])->group(function () {
     //setting
     Route::group(['prefix' => 'setting'], function(){
         Route::get('/', [App\Http\Controllers\User\SettingController::class, 'index'])->name('user.setting.index');
+        Route::get('/info', [App\Http\Controllers\User\SettingController::class, 'info'])->name('user.setting.info');
     });
     //Billing
     Route::group(['prefix' => 'billing'], function(){

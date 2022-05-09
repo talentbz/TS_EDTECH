@@ -1,3 +1,12 @@
+.basic-info {
+    border-right: 2px solid #eee;
+}
+.current-info, .edit-password {
+    border-bottom: 2px solid #eee;
+}
+.edit-info {
+    display: none;
+}
 /*Profile Pic Start*/
 .picture-container{
     position: relative;
@@ -43,38 +52,9 @@
     height: 100px;
     object-fit: cover;
 }
-.parsley-error {
-    border-color: #f46a6a !important;
-}
-.parsley-errors-list {
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-.parsley-errors-list.filled {
-    display: block;
-}
-
-.parsley-errors-list > li {
-    font-size: 12px;
-    list-style: none;
-    color: #f46a6a;
-    margin-top: 5px;
-}
 .contact-submit {
     text-align: right;
 }
-.contact-submit button {
-    background: #d32027 !important;
-    border-color: #d32027 !important;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-.contact-submit button:hover {
-    background: #b11b20 !important;
-    border-color: #b11b20 !important;
-}
-/*Profile Pic End*/
 .my-page {
     width: 80%;
     margin: auto;

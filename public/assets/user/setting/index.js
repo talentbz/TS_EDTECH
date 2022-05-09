@@ -1,32 +1,28 @@
 
 $(document).ready(function () {
-    $('form#myForm').submit(function(e){
+    $('#basicForm').submit(function(e){
         e.preventDefault();
         e.stopPropagation();
-        var formData = new FormData(this);
-        $.ajaxSetup({
-            headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
+        password = $(this).find('input[name="password"]').val();
         $.ajax({
-            url: update_url,
-            method: 'post',
-            data: formData,
+            url: basic_info,
+            method: 'get',
+            data: {password:password},
             success: function (res) {
-                toastr["success"]("Success");
-                setInterval(function(){ 
-                    location.href = list_url; 
-                }, 2000);
+                if(res == true){
+                    toastr["success"]("Success");
+                    $('.edit-info').show();
+                } else {
+                    toastr["warning"]("Password does not match.");
+                }
             },
             error: function (res){
                 console.log(res)
             },
             cache: false,
-            contentType: false,
-            processData: false
         })
     })
+    
     $("#wizard-picture").change(function(){
         readURL(this);
     });
