@@ -151,9 +151,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="name" placeholder="0000" autofocus required>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="name" placeholder="0000" autofocus required>
+                            </div>
                         </div>
                         <div class="mt-4 d-grid">
                             <button class="btn btn-success waves-effect waves-light"
