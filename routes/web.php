@@ -25,6 +25,8 @@ Route::prefix('/user')->middleware(['auth:web', 'User'])->group(function () {
     Route::group(['prefix' => 'setting'], function(){
         Route::get('/', [App\Http\Controllers\User\SettingController::class, 'index'])->name('user.setting.index');
         Route::get('/info', [App\Http\Controllers\User\SettingController::class, 'info'])->name('user.setting.info');
+        Route::get('/edit_password', [App\Http\Controllers\User\SettingController::class, 'edit_password'])->name('user.setting.edit_password');
+        Route::get('/edit_email', [App\Http\Controllers\User\SettingController::class, 'edit_email'])->name('user.setting.edit_email');
     });
     //Billing
     Route::group(['prefix' => 'billing'], function(){

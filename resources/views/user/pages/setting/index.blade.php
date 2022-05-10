@@ -38,10 +38,10 @@
                     </div>
                     <div class="edit-info">
                         <div class="edit-password mt-3 pb-4">
-                            <form action="" class="custom-validation">
+                            <form id="edit-password" class="custom-validation" method="get" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input type="password" id="pass2" class="form-control mb-2" required placeholder="Password" />
+                                        <input type="password" name="password" id="pass2" class="form-control mb-2" required placeholder="Password" />
                                     </div>
                                     <div class="col-md-6"></div>
                                     <div class="col-md-6">
@@ -55,10 +55,10 @@
                             </form>
                         </div>
                         <div class="edit-email mt-3">
-                            <form action="" class="custom-validation">
+                            <form id="edit-email" class="custom-validation" method="get" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input type="email" class="form-control" required parsley-type="email"
+                                        <input type="email" class="form-control" name="email" parsley-type="email"
                                         placeholder="Enter a valid e-mail" value="{{Auth::user()->email}}" required/>
                                     </div>
                                     <div class="col-md-6">
@@ -125,6 +125,8 @@
 @section('script')    
     <script>
         var basic_info = "{{route('user.setting.info')}}";
+        var edit_password = "{{route('user.setting.edit_password')}}";
+        var edit_email = "{{route('user.setting.edit_email')}}";
     </script>
     <!-- form mask -->
     <script src="{{ URL::asset('/assets/libs/inputmask/inputmask.min.js') }}"></script>
