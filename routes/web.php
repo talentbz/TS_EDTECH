@@ -37,7 +37,12 @@ Route::prefix('/user')->middleware(['auth:web', 'User'])->group(function () {
 //admin manger
 Route::prefix('/admin')->middleware(['auth:web', 'Admin'])->group(function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
-    
+    Route::group(['prefix' => 'setting'], function(){
+        Route::group(['prefix' => 'user'], function(){
+            Route::get('/', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.user.index');
+            Route::get('/detail/{id}', [App\Http\Controllers\Admin\UserController::class, 'detail'])->name('admin.user.detail');
+        });
+    });
     //administration section
     Route::group(['prefix' => 'administration'], function(){
         //admin manager section

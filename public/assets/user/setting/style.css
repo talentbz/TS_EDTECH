@@ -1,6 +1,9 @@
 .basic-info {
     border-right: 2px solid #eee;
 }
+.user-status {
+    text-align: right;
+}
 .current-info, .edit-password {
     border-bottom: 2px solid #eee;
 }

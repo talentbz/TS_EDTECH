@@ -20,7 +20,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="javascript: void(0);" key="t-products">Products</a></li>
-                        <li><a href="javascript: void(0);" key="t-product-detail">Users</a></li>
+                        <li><a href="{{route('admin.user.index')}}" key="t-product-detail">Users</a></li>
                         <li><a href="javascript: void(0);" key="t-orders">Verification</a></li>
                     </ul>
                 </li>

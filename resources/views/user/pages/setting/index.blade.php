@@ -15,6 +15,11 @@
             <div class="row">
                 <div class="col-md-6 basic-info">
                     <h5>Basic Info</h5>
+                    <h6 class="user-status">
+                        <span>Verified  </span>/ 
+                        <span>Pending </span>/ 
+                        <span class="text-success">Not Verified </span>
+                    </h6>
                     <div class="current-info pb-4">
                         <div class="mt-3 row">
                             <div class="col-md-6">
